@@ -5,9 +5,9 @@
  * Date: 27/04/2019
  * Time: 01:43
  */
-include('inc/pdo.php');
-include ('functions/request.php');
-include ('functions/functions.php');
+include('../inc/pdo.php');
+include('../functions/request.php');
+include('../functions/functions.php');
 
 $tableaux = select_question();
 
@@ -24,7 +24,7 @@ if (!empty($_POST['submitted'])) {
 
         }
 }
-include ('inc/header.php');
+include('../inc/header.php');
 
 ?>
 
@@ -43,29 +43,31 @@ include ('inc/header.php');
 
 <div class="row my-4">
     <div class="col-md-4">
-        <img src="assets/img/dylan-gillis-533818-unsplash.jpg" alt="Personnes travaillant sur une table" style="width:inherit;">
+        <img class="sidepic" src="../assets/img/home.jpg" alt="Ciel étoilé">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8" style="padding-right:10%;">
         <form class="" action="" method="post">
 
             <?php
 
                 foreach ($tableaux as $tableau){
                     ?>
-                    <label><?php echo $tableau['question'] ?></label>
-                    <?php br(); ?>
-                    <input type="text" name="reponse">
+                    <div class="sideline">
+                        <label><?php echo $tableau['question'] ?></label>
+                        <?php br(); ?>
+                        <input type="text" name="reponse">
 
-                    <label>note</label>
-                    <input type="number" name="note">
-                    <br>
+                        <label>note</label>
+                        <input type="number" name="note">
+                        <br>
+                    </div>
 
                     <?php
 
                 }
         ?>
 
-            <input type="submit" name='submitted'>
+            <input type="submit" name='submitted' class="btn btn-dark my-2 my-sm-0 form">
 
         </form>
     </div>
@@ -83,4 +85,4 @@ include ('inc/header.php');
 
 <?php
 
-include ('inc/footer.php');
+include('../inc/footer.php');

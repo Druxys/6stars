@@ -1,7 +1,7 @@
 <?php
 include('../functions/functions.php');
 include('../functions/request.php');
-include('../inc/header.php');
+
 
 $error=array();
 // Prototype : variable en dur
@@ -18,13 +18,39 @@ if( !empty($_POST['submitted']) )
 
 }
 
-
+include ('../inc/header.php');
 ?>
 
-<form class="" method="post">
-    <h1>Commenter cette entreprise</h1>
-    <textarea class="" id="commentaire" rows="3" name="commentaire"></textarea>
-    <span class=""><?php if(!empty($error['commentaire'])){echo $error['commentaire'];}?></span>
-    <input type="submit" name="submitted" value="Envoyer">
-</form>
-<?php include('inc/footer.php');
+<div class="row my-4 note">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 text-center page-header">
+        <h2>Donner mon avis sur une entreprise</h2>
+        <p>
+            Contribuez en renseignant votre expérience au sein de cette entreprise.
+        </p>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
+
+<div class="row my-4">
+    <div class="col-md-4">
+        <img class="sidepic" src="../assets/img/home.jpg" alt="Ciel étoilé">
+    </div>
+    <div class="col-md-8" style="padding-right:10%;">
+        <div class="result">
+            <h3>Vous avez attribué le score de <span>5/5</span></h3>
+            <!--METTRE LE VISUEL DES ETOILES QUAND CA MARCHERA ENFIN UN JOUR-->
+        </div>
+        <form class="sideline" method="post">
+            <h3>Ajouter un commentaire sur le score de l'entreprise</h3>
+            <p>N'hésitez pas à ajouter tout élément complémentaire.</p>
+            <textarea class="" id="commentaire" rows="9" name="commentaire" style="width:100%;"></textarea>
+            <span class=""><?php if(!empty($error['commentaire'])){echo $error['commentaire'];}?></span>
+            <br/>
+            <input class="btn btn-dark my-2 my-sm-0 form" type="submit" name="submitted" value="Envoyer">
+        </form>
+    </div>
+</div>
+<?php include('../inc/footer.php');

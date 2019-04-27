@@ -1,6 +1,9 @@
 <footer>
-        <div class="row bg-dark text-white py-4">
-            <div class="col-md-3">
+        <div class="row bg-dark text-white py-4 noircnoir">
+            <div class="col-md-3" style="padding-left:3%;">
+                <h4>
+                    Naviguer
+                </h4>
                 <ul class="list-link">
                     <li class="list-item">
                        <a class="link-style" href="#">Accueil</a>
@@ -20,9 +23,9 @@
                 </ul>
             </div>
             <div class="col-md-3">
-                <h3 class="text-center">
+                <h4>
                     Entreprise
-                </h3>
+                </h4>
                 <ul class="list-link">
                     <li class="list-item">
                        Espace pro
@@ -33,9 +36,9 @@
                 </ul>
             </div>
             <div class="col-md-3">
-                <h3 class="text-center">
-                6-stars
-                </h3>
+                <h4>
+                6.stars
+                </h4>
                 <ul class="list-link">
                     <li class="list-item">
                        A propos de nous
@@ -49,11 +52,11 @@
                 </ul>
             </div>
             <div class="col-md-3">
-                <h3>
+                <h4>
                     Nous contacter
-                </h3>
+                </h4>
                 <address>
-                    <strong>6-stars, Inc.</strong><br />24 place Saint Marc<br /> 76000 Rouen<br /> <abbr title="Phone">P:</abbr> 02.35.70.04.04<br /> <abbr title="Mail">M:</abbr> bonjour@6stars.com
+                    <strong>6.stars, Inc.</strong><br />24 place Saint Marc<br /> 76000 Rouen<br /> <abbr title="Phone">P:</abbr> 02.35.70.04.04<br /> <abbr title="Mail">M:</abbr> bonjour@6stars.com
                 </address>
                 <div class="social-networks" role="group">
                     <a class="mx-2" href="#"><i class="fab fa-facebook fa-2x"></i></a>
