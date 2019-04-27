@@ -25,7 +25,9 @@
 .aligner{
     text-align: center;
 }
-
+.container{
+    height: 500px;
+}
 form {
     margin-top:5%;
     margin-bottom:15%;
@@ -40,11 +42,47 @@ form {
     padding-bottom:5%;
     margin-top:0!important;
 }
-
+.test{
+    background-color: black;
+    height: 400px;
+}
 .logo{
     width: 30vh;
 }
 
-.snet{
+.page-header{
+    color:white;
+}
 
+.sidepic{
+    width:inherit;
+    height: 100%;
+}
+.sideline {
+    border-left-color: #f5a92e;
+    border-left-style: solid;
+    padding-left:2%;
+    margin-bottom: 1%;
+}
+.form {
+    width:100%;
+}
+.fa-facebook {
+    color:#f5a92e;
+}
+.fa-instagram {
+    color:#f5a92e;
+}
+.fa-twitter {
+    color:#f5a92e;
+}
+.noircnoir {
+    background-color: black !important;
+}
+.result {
+    text-align: center;
+    border:solid;
+    border-width: thin;
+    border-color: #f5a92e;
+    padding:3%;
 }
