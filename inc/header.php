@@ -28,7 +28,7 @@ include('pdo.php');
     <div class="collapse navbar-collapse navbar-text" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link" href="index.php">Accueil </a>
-            <a class="nav-item nav-link" href="">Chercher une entreprise</a>
+            <a class="nav-item nav-link" href="index.php">Chercher une entreprise</a>
             <a class="nav-item nav-link" href="question.php">Donner mon avis </a>
             <a class="nav-item nav-link" href="#">Se connecter </a>
         </div>
