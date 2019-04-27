@@ -14,16 +14,21 @@ $id_questions = select_question();
 $nbr = 1;
 
 $note = note();
-$j = count($note);
+
 
 $somme_notes = count($note);
 $i = 0;
+$n = 0;
+
+//debug($note);
+
+//
 foreach($note as $cle=>$valeur)
 {
     $i++;
-    $somme_notes+=$valeur['note'];
+    $n+=$valeur['note'];
 }
-$moyenne = $somme_notes / $i;
+$moyenne = $n / $i;
 
 
 include ("../inc/header.php");
@@ -48,23 +53,35 @@ include ("../inc/header.php");
             <div class="result">
                 <h3>Note de l'entreprise <span>6/6</span></h3>
                 <h3>Note des utilisateurs <span><?php echo $moyenne;?></span></h3>
-                <h3><?php foreach ($id_questions as $id_question) {
+                <h3><?php $v = 0;foreach ($id_questions as $id_question) {
 
-                        $noteQuestion = noteQuestion($id_questions);
+                        $noteQuestion = noteQuestion($id_question['id']);
 
-                        $j = count($note);
 
                         $somme_notes_question = count($noteQuestion);
+
                         $i = 0;
+
+                        $n = 0;
+//                        debug($id_question);
                         foreach($noteQuestion as $cle=>$valeur)
                         {
                             $i++;
-                            $somme_notes_question+=$valeur['note'];
+                            $n +=  $valeur['note'];
                         }
-                        $moyenne_question = $somme_notes_question / $i;
-                        ?> Note question <?php echo $nbr++ ;?> : <?php echo $moyenne_question; br();
+
+                        $moyenne_question = $n / $i;
+
+                        if(!empty($moyenne_question) && !is_nan($moyenne_question))
+                        {
+                            ?>
+                            La question <?php echo $nbr++ ;?> : <?php
+                            echo $moyenne_question; br();
+
+                        }
 
                     }?> </h3>
+
 
 
 
