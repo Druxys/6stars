@@ -43,7 +43,7 @@ include('../inc/header.php');
 
 <div class="row my-4">
     <div class="col-md-4">
-        <img class="sidepic" src="../assets/img/home.jpg" alt="Ciel étoilé">
+        <img class="sidepic" src="assets/img/home.jpg" alt="Ciel étoilé">
     </div>
     <div class="col-md-8" style="padding-right:10%;">
         <form class="" action="" method="post">
