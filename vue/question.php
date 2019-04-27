@@ -17,7 +17,7 @@ if (!empty($_POST['submitted'])) {
 
             $iduser = 1;
             $ident = 1;
-            $note = clean('note');
+            $note = 5;
             $idreponse = clean('reponse');
             $idquestion = $i;
             insert_reponse($iduser, $ident, $idquestion, $idreponse, $note);
@@ -51,9 +51,10 @@ include('../inc/header.php');
             <?php
 
                 foreach ($tableaux as $tableau){
-                    $i++;
+                    $i = 0;
+
                     ?>
-<<<<<<< HEAD:question.php
+            <div class="sideline">
                     <label><?php echo $tableau['question'] ?></label>
                     <?php br();
                     $repVar = getInfoCharQuestion($tableau['question']);
@@ -90,9 +91,10 @@ include('../inc/header.php');
                         </div>
                         <?php
                         }elseif(!empty($repRadio)){?>
-                        OUI
+                        <label>OUI</label>
                         <input type="radio" name="radioY<?php echo $i;?>" >
-                        NON
+                        <label>NON</label>
+                        <?php $i++; ?>
                         <input type="radio" name="radioN<?php echo $i;?>  ">
                         <?php
                             }
@@ -100,19 +102,8 @@ include('../inc/header.php');
                         ?>
 
 
-
+            </div>
                     <br>
-=======
-                    <div class="sideline">
-                        <label><?php echo $tableau['question'] ?></label>
-                        <?php br(); ?>
-                        <input type="text" name="reponse">
-
-                        <label>note</label>
-                        <input type="number" name="note">
-                        <br>
-                    </div>
->>>>>>> d4b44a7c233a46a86208b69c0dbda62cc1659e51:vue/question.php
 
                     <?php
 
