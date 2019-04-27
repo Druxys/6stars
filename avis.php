@@ -7,7 +7,7 @@ $error=array();
 $id = 1;
 $idEnt = 1;
 
-if( !empty($_POST['submitted']) )
+/*if( !empty($_POST['submitted']) )
 {
     //Champ commentaire
     $comment=trim(strip_tags($_POST['commentaire']));
@@ -15,7 +15,7 @@ if( !empty($_POST['submitted']) )
 
     writeComment($id, $comment, $idEnt);
 
-}
+}*/
 
 include('inc/header.php');
 ?>
