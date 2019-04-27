@@ -15,7 +15,7 @@ include 'inc/header.php'
                     <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Une entreprise"
                            aria-describedby="append" required>
                     <div class="input-group-prepend">
-                        <input type="submit" value="Rechercher" class="btn btn-light btn-sm " id="append">
+                        <input type="submit" value="Rechercher" class="btn btn-light ">
                     </div>
                 </div>
             </div>
@@ -58,12 +58,16 @@ include 'inc/header.php'
     </div>
     <div class="col-md-3">
         <p><i class="fas fa-star fa-3x"></i> <br>
-            Gérez votre score <br> 6stars
+            Gérez votre score 6.stars
+        <br/>
+            Répondez au questionnaire 6.stars et affichez votre score entreprise à vos futurs collaborateurs.
         </p>
     </div>
     <div class="col-md-3">
         <p><i class="fas fa-bullhorn fa-3x"></i> <br>
             Partagez votre politique d'accessibilité
+        <br/>
+            Publiez vos dernières actions tournées vers le handicap et le recrutement pour attirer les talents.
         </p>
     </div>
 </div>
