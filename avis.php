@@ -1,6 +1,6 @@
-<?
-include('../functions/functions.php');
-include('../functions/request.php');
+<?php
+include('functions/functions.php');
+include('functions/request.php');
 
 $error=array();
 // Prototype : variable en dur
@@ -17,7 +17,7 @@ if( !empty($_POST['submitted']) )
 
 }
 
-include('../inc/header.php');
+include('inc/header.php');
 ?>
 
 <div class="row my-4 note">
@@ -42,7 +42,7 @@ include('../inc/header.php');
             <h3>Vous avez attribué le score de <span>5/5</span></h3>
             <!--METTRE LE VISUEL DES ETOILES QUAND CA MARCHERA ENFIN UN JOUR-->
         </div>
-        <form class="sideline" method="post">
+        <form class="sideline" method="post" action="index.php">
             <h3>Ajouter un commentaire sur le score de l'entreprise</h3>
             <p>N'hésitez pas à ajouter tout élément complémentaire.</p>
             <textarea class="" id="commentaire" rows="9" name="commentaire" style="width:100%;"></textarea>
@@ -52,5 +52,5 @@ include('../inc/header.php');
         </form>
     </div>
 </div>
-<?php include('../inc/footer.php');
+<?php include('inc/footer.php');
 
