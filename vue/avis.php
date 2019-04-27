@@ -1,7 +1,6 @@
-<?php
+<?
 include('../functions/functions.php');
 include('../functions/request.php');
-include('../inc/header.php');
 
 $error=array();
 // Prototype : variable en dur
@@ -19,12 +18,15 @@ if( !empty($_POST['submitted']) )
 }
 
 
+include('../inc/header.php');
 ?>
-
-<form class="" method="post">
-    <h1>Commenter cette entreprise</h1>
-    <textarea class="" id="commentaire" rows="3" name="commentaire"></textarea>
-    <span class=""><?php if(!empty($error['commentaire'])){echo $error['commentaire'];}?></span>
-    <input type="submit" name="submitted" value="Envoyer">
-</form>
-<?php include('inc/footer.php');
+    <div class="" style="background: url('../assets/img/home.jpg') no-repeat center center fixed;padding-top:10%!important;">
+        <form class="" method="post">
+            <h1>Quelques choses à rajouter?</h1>
+            <textarea class="" id="commentaire" rows="3" name="commentaire"></textarea>
+            <span class=""><?php if(!empty($error['commentaire'])){echo $error['commentaire'];}?></span>
+            <input type="submit" name="submitted" value="Envoyer">
+        </form>
+    </div>
+<?php
+include('../inc/footer.php');

@@ -35,3 +35,44 @@ function insert_reponse($iduser, $ident, $idquestion,$reponse, $note){
         $query->execute();
     }
 
+    function getInfoCharQuestion($question)
+    {
+        global $pdo;
+        $sql = "SELECT valeur_retour FROM question WHERE question = :question AND valeur_retour = 'varchar'";
+        $query = $pdo -> prepare($sql);
+        $query->bindValue(':question',$question,PDO::PARAM_STR);
+        $query-> execute();
+        return $query -> fetchAll();
+    }
+
+    function getInfoIntQuestion($question)
+    {
+        global $pdo;
+        $sql = "SELECT valeur_retour FROM question WHERE question = :question AND valeur_retour = 'int'";
+        $query = $pdo -> prepare($sql);
+        $query->bindValue(':question',$question,PDO::PARAM_STR);
+        $query-> execute();
+        return $query -> fetchAll();
+    }
+
+    function getInfoRadioQuestion($question)
+    {
+        global $pdo;
+        $sql = "SELECT valeur_retour FROM question WHERE question = :question AND valeur_retour = 'radio'";
+        $query = $pdo -> prepare($sql);
+        $query->bindValue(':question',$question,PDO::PARAM_STR);
+        $query-> execute();
+        return $query -> fetchAll();
+    }
+
+    function getInfoCheckBoxQuestion($question)
+    {
+        global $pdo;
+        $sql = "SELECT valeur_retour FROM question WHERE question = :question AND valeur_retour = 'checkbox'";
+        $query = $pdo -> prepare($sql);
+        $query->bindValue(':question',$question,PDO::PARAM_STR);
+        $query-> execute();
+        return $query -> fetchAll();
+    }
+
+

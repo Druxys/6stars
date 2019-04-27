@@ -51,13 +51,55 @@ include ('inc/header.php');
             <?php
 
                 foreach ($tableaux as $tableau){
+                    $i++;
                     ?>
                     <label><?php echo $tableau['question'] ?></label>
-                    <?php br(); ?>
-                    <input type="text" name="reponse">
+                    <?php br();
+                    $repVar = getInfoCharQuestion($tableau['question']);
+                    $repRadio = getInforadioQuestion($tableau['question']);
+                    $repInt = getInfoIntQuestion($tableau['question']);
+                    $repCheckbox = getInfoCheckBoxQuestion($tableau['question']);
 
-                    <label>note</label>
-                    <input type="number" name="note">
+//                    var_dump($repVar);
+                    if(!empty($repVar)) {
+                        ?>
+                        <input type="text" name="reponse">
+                        <?php
+                        }elseif (!empty($repInt)){
+                        ?>
+
+                        <div class="row">
+                            <label>Note</label>
+                            <fieldset class="rate">
+                                <input id="rate1-star5" type="radio" name="rate1" value="5" />
+                                <label for="rate1-star5" title="Excellent">5</label>
+
+                                <input id="rate1-star4" type="radio" name="rate1" value="4" />
+                                <label for="rate1-star4" title="Good">4</label>
+
+                                <input id="rate1-star3" type="radio" name="rate1" value="3" />
+                                <label for="rate1-star3" title="Satisfactory">3</label>
+
+                                <input id="rate1-star2" type="radio" name="rate1" value="2" />
+                                <label for="rate1-star2" title="Bad">2</label>
+
+                                <input id="rate1-star1" type="radio" name="rate1" value="1" />
+                                <label for="rate1-star1" title="Very bad">1</label>
+                            </fieldset>
+                        </div>
+                        <?php
+                        }elseif(!empty($repRadio)){?>
+                        OUI
+                        <input type="radio" name="radioY<?php echo $i;?>" >
+                        NON
+                        <input type="radio" name="radioN<?php echo $i;?>  ">
+                        <?php
+                            }
+
+                        ?>
+
+
+
                     <br>
 
                     <?php
