@@ -15,7 +15,7 @@ include 'inc/header.php'
                     <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Une entreprise"
                            aria-describedby="append" required>
                     <div class="input-group-prepend">
-                        <input type="submit" value="Rechercher" class="btn btn-light btn-sm " id="append">
+                        <input type="submit" value="Rechercher" class="btn btn-light ">
                     </div>
                 </div>
             </div>
