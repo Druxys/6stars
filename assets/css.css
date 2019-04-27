@@ -1,0 +1,50 @@
+*{
+    font-family: 'Muli', sans-serif;
+}
+.list-link{
+    list-style: none;
+}
+
+.link-style{
+    color: white;
+    text-decoration: none !important;
+}
+
+.link-style:hover{
+    color: #f5a92e;
+}
+
+.width100{
+    width: 100%;
+}
+
+.inline{
+    display: inline;
+}
+
+.aligner{
+    text-align: center;
+}
+
+form {
+    margin-top:5%;
+    margin-bottom:15%;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    background-color:#f5a92e;
+    color:white;
+}
+.note {
+    background-color:black;
+    padding-top:5%;
+    padding-bottom:5%;
+    margin-top:0!important;
+}
+
+.logo{
+    width: 30vh;
+}
+
+.snet{
+
+}
